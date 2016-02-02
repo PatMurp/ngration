@@ -7,5 +7,7 @@ Demo Node.js starter project that aims to implement securiy from the beginning u
 ##### To run application:
 
 	$ npm install 
-	$	bower install  
+	$ bower install  
 	$ node app.js
+
+point browser to: [localhost:4000](http://localhost:4000/)
