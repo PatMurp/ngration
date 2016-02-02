@@ -1,0 +1,28 @@
+{
+  "name": "ngration",
+  "description": "Starter node.js project which implements secruity using Continuous Integration",
+  "main": "app.js",
+  "authors": [
+    "Patrick Murphy <murphypatv@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "security",
+    "automation",
+    "continuous",
+    "integration"
+  ],
+  "homepage": "https://github.com/PatMurp/ngration",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

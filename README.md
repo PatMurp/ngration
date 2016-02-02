@@ -6,5 +6,6 @@ Demo Node.js starter project that aims to implement securiy from the beginning u
 
 ##### To run application:
 
-	$ npm install  
+	$ npm install 
+	$	bower install  
 	$ node app.js
