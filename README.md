@@ -2,7 +2,7 @@
 
 #### !! under construction !!
 
-Demo Node.js starter project that aims to implement securiy from the beginning using Continuous Integration
+Demo Node.js starter project that aims to implement security from the beginning using Continuous Integration
 
 ##### To run application:
 
