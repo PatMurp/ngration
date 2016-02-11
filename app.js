@@ -1,4 +1,6 @@
+"use strict";
 var express = require('express');
+
 
 var app = express();
 
@@ -12,3 +14,4 @@ app.listen(process.env.PORT || 4000, function() {
 
 // export to enable supertest tests
 module.exports = app;
+
