@@ -1,4 +1,4 @@
-# ngration
+# ngration [![Build Status](https://travis-ci.org/PatMurp/ngration.svg?branch=master)](https://travis-ci.org/PatMurp/ngration)
 
 #### !! under construction !!
 
