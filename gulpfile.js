@@ -15,9 +15,9 @@ jsSources = [
 gulp.task('lint', function() {
 	return gulp.src(jsSources)
 		.pipe(jshint())
-		.pipe(jshint.reporter(stylish));
+		.pipe(jshint.reporter(stylish))
+		.pipe(jshint.reporter('fail'));
 });
 
-gulp.task('default', function() {
-	gutil.log('Workflows are great');
-});
+gulp.task('default', ['lint']);
+gulp.task('ci', ['lint']);
