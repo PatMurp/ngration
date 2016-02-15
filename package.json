@@ -4,7 +4,7 @@
   "description": "Starter node.js project which implements secruity using Continuous Integration",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha & nsp check"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.1.0",
     "mocha": "^2.4.5",
+    "nsp": "^2.2.0",
     "rewire": "^2.5.1",
     "supertest": "^1.1.0"
   }
