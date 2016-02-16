@@ -13,6 +13,7 @@ jsSources = [
 	'app.js',
 	'routes.js',
 	'config/*.js',
+	'public/js/*js',
 	'gulpfile.js'
 ];
 
