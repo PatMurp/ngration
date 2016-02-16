@@ -1,20 +1,7 @@
 "use strict";
 module.exports = function(app) {
 
-	var skierTerms = [
-    {
-        term: "Rip",
-        defined: "To move at a high rate of speed"
-    },
-    {
-        term: "Huck",
-        defined: "To throw your body off of something, usually a natural feature like a cliff"
-    },
-    {
-        term: "Chowder",
-        defined: "Powder after it has been sufficiently skied"
-    }
-	];
+	var skierTerms = require("./public/json/skiterms");
 
 	app.get("/dictionary-api", function(req, res) {
 		res.json(skierTerms);
