@@ -1,3 +1,4 @@
+/*global describe, it, beforeEach*/
 "use strict";
 var request = require('supertest');
 var expect = require('chai').expect;
@@ -61,6 +62,14 @@ describe("Ngration App", function() {
     	});
     });
 
+    it("POSTS dictionary-api", function(done) {
+    	request(app)
+    		.post("/dictionary-api")
+    		.send({"term": "Three", "defined": "Term Three defined"})
+    		.expect(200)
+    		.end(done);
+    });
 
 	});
+
 });

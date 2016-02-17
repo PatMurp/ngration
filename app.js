@@ -9,7 +9,14 @@ require('./routes')(app); // add routes
 
 var skierTerms = require("./public/json/skiterms");
 
+// get terms
 app.get("/dictionary-api", function(req, res) {
+	res.json(skierTerms);
+});
+
+// add new term
+app.post("/dictionary-api", function(req, res) {
+	skierTerms.push(req.body);
 	res.json(skierTerms);
 });
 
