@@ -39,8 +39,6 @@ describe("Ngration App", function() {
             defined: "Term Two Defined"
         }
       ];
-
-      //var skierTerms = this.defs;
       app.__set__("skierTerms", this.defs);
 
     });
@@ -66,6 +64,13 @@ describe("Ngration App", function() {
     	request(app)
     		.post("/dictionary-api")
     		.send({"term": "Three", "defined": "Term Three defined"})
+    		.expect(200)
+    		.end(done);
+    });
+
+    it ("DELETES dictionary-api", function(done) {
+    	request(app)
+    		.delete("/dictionary-api/One")
     		.expect(200)
     		.end(done);
     });
