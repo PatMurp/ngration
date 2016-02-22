@@ -1,5 +1,5 @@
 {
 	"node": true,
 	"globalstrict": true,
-	"jquery": true
+	"maxcomplexity": 3
 }
