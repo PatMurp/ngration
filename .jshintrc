@@ -1,5 +1,5 @@
 {
 	"node": true,
 	"globalstrict": true,
-	"maxcomplexity": 3
+	"maxcomplexity": 10
 }
