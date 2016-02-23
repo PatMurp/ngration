@@ -4,6 +4,7 @@ var gutil = require('gulp-util');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var mocha = require('gulp-mocha');
+var complexity = require('gulp-complexity');
 
 
 var jsSources,
@@ -34,6 +35,11 @@ gulp.task('lint', function() {
 		.pipe(jshint())
 		.pipe(jshint.reporter(stylish))
 		.pipe(jshint.reporter('fail'));
+});
+
+gulp.task('complex', function() {
+	return gulp.src(jsSources)
+	.pipe(complexity());
 });
 
 gulp.task('default', ['lint']);
