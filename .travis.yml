@@ -3,8 +3,9 @@ node_js:
   - "5.0"
   - "4.2"
 before_script:
-  - npm install -g bower gulp
+  - npm install -g bower gulp istanbul
   - bower install
 script:
   - gulp ci
   - npm test
+  - npm run coverage

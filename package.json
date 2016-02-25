@@ -4,7 +4,8 @@
   "description": "Starter node.js project which implements secruity using Continuous Integration",
   "main": "app.js",
   "scripts": {
-    "test": "mocha & nsp check"
+    "test": "mocha & nsp check",
+    "coverage": "istanbul cover _mocha"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "gulp-jshint": "^2.0.0",
     "gulp-mocha": "^2.2.0",
     "gulp-util": "^3.0.7",
+    "istanbul": "^0.4.2",
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.1.0",
     "mocha": "^2.4.5",
