@@ -9,6 +9,7 @@ Demo Node.js project that aims to expirement with implementing security from the
 * use nsp tool to check for node module  security vulnerabilities
 * use istanbul to create code coverage reports
 * gulp ci task to analyze code complexity; outputs maintainibility index
+* gulp ci task to check for copy/pasted & structurally similar code
 * gulp ci task which run jshint on all JavaScript files. Configured to:
 	* enforce "use strict"; 
 	* Cyclomatic Complexity maximum value is 10 
