@@ -5,6 +5,7 @@ var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var mocha = require('gulp-mocha');
 var complexity = require('gulp-complexity');
+var jsinspect = require('gulp-jsinspect');
 
 
 var jsSources,
@@ -42,7 +43,17 @@ gulp.task('complex', function() {
 	.pipe(complexity());
 });
 
+// detect copy/pasted & structrually similar code
+gulp.task('inspect', function() {
+	return gulp.src(jsSources)
+	.pipe(jsinspect({
+		'threshold': 10,
+		'identifiers': true,
+		'supress': 0
+	}));
+});
+
 gulp.task('default', ['lint']);
 
 // continous integration tasks
-gulp.task('ci', ['lint', 'complex']);
+gulp.task('ci', ['lint', 'complex', 'inspect']);
