@@ -47,7 +47,7 @@ gulp.task('complex', function() {
 gulp.task('inspect', function() {
 	return gulp.src(jsSources)
 	.pipe(jsinspect({
-		'treshold': 10,
+		'threshold': 10,
 		'identifiers': true,
 		'supress': 0
 	}));
