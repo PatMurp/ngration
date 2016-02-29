@@ -117,3 +117,7 @@ input:last-of-type {
 // button:hover {
 //     color: yellow;
 // }
+
+input[type=text]  {
+    color: black;
+}

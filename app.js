@@ -20,6 +20,7 @@ app.post("/dictionary-api", function(req, res) {
 	res.json(skierTerms);
 });
 
+
 // delete a term
 app.delete("/dictionary-api/:term", function(req, res) {
 	skierTerms = skierTerms.filter(function(definition) {
