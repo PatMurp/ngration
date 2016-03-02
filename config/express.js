@@ -24,5 +24,7 @@ exports.addMiddleware = function(app) {
 		xframe:'DENY' // prevent clickjacking
 	}));
 
+	app.disable('x-powered-by'); // dont identify express framework
+
 	app.use(errorHandler()); // Error handler must be last
 };
