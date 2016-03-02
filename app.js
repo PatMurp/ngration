@@ -3,11 +3,12 @@ var express = require('express');
 
 var app = express();
 
-
 require('./config/express').addMiddleware(app); // add middleware
 require('./routes')(app); // add routes 
 
 var skierTerms = require("./public/json/skiterms");
+
+
 
 // get terms
 app.get("/dictionary-api", function(req, res) {
