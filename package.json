@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --reporter mocha-tap-reporter > test.tap",
     "nsp": "nsp check",
-    "coverage": "istanbul cover _mocha"
+    "coverage": "istanbul cover _mocha",
+    "lint": "gulp lint > checkstyle-result.xml"
   },
   "repository": {
     "type": "git",
