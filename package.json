@@ -4,7 +4,8 @@
   "description": "Starter node.js project which implements secruity using Continuous Integration",
   "main": "app.js",
   "scripts": {
-    "test": "mocha & nsp check",
+    "test": "mocha > test.tap",
+    "nsp": "nsp check",
     "coverage": "istanbul cover _mocha"
   },
   "repository": {
