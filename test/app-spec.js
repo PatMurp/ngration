@@ -1,3 +1,4 @@
+/*global describe, it, beforeEach*/
 "use strict";
 var request = require('supertest');
 var expect = require('chai').expect;
@@ -7,8 +8,14 @@ var app = rewire('../app');
 
 describe("Ngration App", function() {
 
-	it("Loads the home page and checks heading", function(done) {
+	it("Loads the home page", function(done) {
 		request(app).get("/").expect(200).end(function(err, res) {
+			done();
+		});
+	});
+
+	it("Checks H1 heading", function(done) {
+		request(app).get("/").end(function(err, res) {
 			var $ = cheerio.load(res.text); // load response text
 			var pageHeading = $("body>h1:first-child").text(); // check page heading
 			expect(pageHeading).to.equal("Welcome to Ngration");
