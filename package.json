@@ -39,7 +39,6 @@
     "chai": "^3.5.0",
     "cheerio": "^0.20.0",
     "gulp": "^3.9.1",
-    "gulp-checkstyle-jenkins-reporter": "^2.1.0",
     "gulp-complexity": "^0.3.2",
     "gulp-jshint": "^2.0.0",
     "gulp-jsinspect": "^2.0.0",
