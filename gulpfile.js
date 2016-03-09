@@ -33,7 +33,7 @@ gulp.task('utest', function() {
 gulp.task('lint', function() {
 	return gulp.src(jsSources)
 		.pipe(jshint())
-		.pipe(jshint.reporter('gulp-checkstyle-jenkins-reporter'))
+		.pipe(jshint.reporter(stylish))
 		.pipe(jshint.reporter('fail'));
 });
 
