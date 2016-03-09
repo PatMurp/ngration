@@ -1,4 +1,5 @@
-
+/*global $:false */
+"use strict";
 $(function () {
 
     $.getJSON('/dictionary-api', printTerms);
