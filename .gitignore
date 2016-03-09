@@ -4,3 +4,4 @@ public/bower_components
 coverage
 test.tap
 checkstyle-result.xml
+.sonar
