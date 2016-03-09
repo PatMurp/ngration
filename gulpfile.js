@@ -33,7 +33,7 @@ gulp.task('utest', function() {
 gulp.task('lint', function() {
 	return gulp.src(jsSources)
 		.pipe(jshint())
-		.pipe(jshint.reporter(stylish))
+		.pipe(jshint.reporter('gulp-checkstyle-jenkins-reporter'))
 		.pipe(jshint.reporter('fail'));
 });
 
@@ -56,6 +56,6 @@ gulp.task('inspect', function() {
 gulp.task('default', ['lint']);
 
 // continous integration tasks
-gulp.task('ci', ['lint', 'complex', 'inspect']);
+gulp.task('ci', ['complex', 'inspect']);
 
 
