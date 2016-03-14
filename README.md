@@ -10,17 +10,18 @@ Demo Node.js project that aims to expirement with implementing security from the
 * use istanbul to create code coverage reports
 * gulp ci task to analyze code complexity; outputs maintainibility index
 * gulp ci task to check for copy/pasted & structurally similar code
-* gulp ci task which run jshint on all JavaScript files. Configured to:
-	* enforce "use strict"; 
-	* Cyclomatic Complexity maximum value is 10 
+* npm lint task which runs jshint on all JavaScript files. Configured to:
+	* view gist of jshintrc file [here](https://gist.github.com/PatMurp/9ff6aef85deeb91c3c6b)
 
-##### To run CI tasks locally:
+##### To run CI tasks individually:
 
 	$ npm install 
 	$ bower install 
 	$ gulp ci
 	$ npm test
+	$ npm run nsp
 	$ npm run coverage
+	$ npm run lint
 
 ##### To run application:
 

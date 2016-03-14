@@ -1,6 +1,5 @@
 "use strict";
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var mocha = require('gulp-mocha');
@@ -56,4 +55,4 @@ gulp.task('inspect', function() {
 gulp.task('default', ['lint']);
 
 // continous integration tasks
-gulp.task('ci', ['lint', 'complex', 'inspect']);
+gulp.task('ci', ['complex', 'inspect']);
