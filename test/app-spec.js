@@ -16,6 +16,12 @@ describe("Ngration App", function() {
 		});
 	});
 
+    it("Loads an invalid route", function(done) {
+      request(app).get("/invalid").expect(404).end(function(err, res) {
+        done();
+      });
+    });
+
 	it("Checks H1 heading", function(done) {
 		request(app).get("/").end(function(err, res) {
 			var $ = cheerio.load(res.text); // load response text
