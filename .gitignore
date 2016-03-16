@@ -3,6 +3,6 @@ node_modules
 public/bower_components
 coverage
 test.tap
-checkstyle-result.xml
+report
 .sonar
 npm-debug.log

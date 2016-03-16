@@ -16,7 +16,7 @@ describe("Ngration App", function() {
 		});
 	});
 
-    it("Loads an invalid route", function(done) {
+    it("Loads an invalid route get 404 error", function(done) {
       request(app).get("/invalid").expect(404).end(function(err, res) {
         done();
       });
@@ -30,7 +30,6 @@ describe("Ngration App", function() {
 			done();
 		});
 	});
-
 
 
 	describe("Dictionary Api", function() {
