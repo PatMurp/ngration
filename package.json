@@ -4,10 +4,14 @@
   "description": "Starter node.js project which implements secruity using Continuous Integration",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --reporter mocha-tap-reporter > test.tap",
-    "nsp": "nsp check",
-    "coverage": "istanbul cover _mocha",
-    "lint": "jshint --jslint-reporter *.js config/*.js public/js/*.js > jshint.xml"
+    "test": " echo '=> testing' && mocha --reporter mocha-tap-reporter > test.tap",
+    "nsp": "echo '=> checking module security vulnerabilities' && nsp check",
+    "coverage": "echo '=> generating coverage report' && istanbul cover _mocha",
+    "lint": " echo '=> linting' && jshint --jslint-reporter *.js config/*.js public/js/*.js > jshint.xml",
+    "complexity": "echo '=> checking code complexity' && gulp complex",
+    "copied": "echo '=> check for copy/pasted files' && gulp inspect",
+    "build": "echo '=> building' && npm test -s &&  npm run nsp -s && npm run complexity -s && npm run copied -s && npm run coverage -s && echo '=> building finished'",
+    "pretest": "npm run lint"
   },
   "repository": {
     "type": "git",
