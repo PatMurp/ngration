@@ -4,6 +4,5 @@ public/bower_components
 coverage
 test.tap
 jshint.xml
-checkstyle-result.xml
 .sonar
 npm-debug.log
