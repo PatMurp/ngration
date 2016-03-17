@@ -9,7 +9,8 @@
     "coverage": "echo '=> generating coverage report' && istanbul cover _mocha",
     "lint": " echo '=> linting' && jshint --jslint-reporter *.js config/*.js public/js/*.js > jshint.xml",
     "complexity": "echo '=> checking code complexity' && gulp complex",
-    "copied": "echo '=> check for copy/pasted files' && gulp inspect",
+    "lint-cs": "jshint --reporter=checkstyle *.js config/*.js > checkstyle-result.xml",
+    "copied": "echo '=> check for copy/pasted code' && gulp inspect",
     "build": "echo '=> building' && npm test -s &&  npm run nsp -s && npm run complexity -s && npm run copied -s && npm run coverage -s && echo '=> building finished'",
     "pretest": "npm run lint"
   },
