@@ -56,6 +56,6 @@ gulp.task('inspect', function() {
 gulp.task('default', ['lint']);
 
 // continous integration tasks
-gulp.task('ci', ['complex', 'inspect']);
+gulp.task('ci', ['complex']);
 
 

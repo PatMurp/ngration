@@ -10,4 +10,5 @@ script:
   - npm test
   - npm run nsp
   - npm run --silent lint
+  - npm run --silent jsinspect
   - npm run coverage
