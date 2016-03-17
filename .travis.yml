@@ -9,6 +9,6 @@ script:
   - gulp ci
   - npm test
   - npm run nsp
-  - npm run --silent lint
-  - npm run --silent jsinspect
+  - npm run -s lint
+  - npm run -s jsinspect
   - npm run coverage
