@@ -5,4 +5,5 @@ coverage
 test.tap
 jshint.xml
 .sonar
+pmd.xml
 npm-debug.log

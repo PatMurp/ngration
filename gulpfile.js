@@ -48,7 +48,8 @@ gulp.task('inspect', function() {
 	.pipe(jsinspect({
 		'threshold': 10,
 		'identifiers': true,
-		'supress': 0
+		'supress': 0,
+		"reporter": "pmd"
 	}));
 });
 
