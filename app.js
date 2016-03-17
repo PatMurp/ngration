@@ -1,4 +1,4 @@
-"use strict";
+
 var express = require('express');
 
 var app = express();
@@ -21,11 +21,6 @@ app.post("/dictionary-api", function(req, res) {
 	res.json(skierTerms);
 });
 
-// add new term
-app.post("/dictionary-api", function(req, res) {
-	skierTerms.push(req.body);
-	res.json(skierTerms);
-});
 
 // delete a term
 app.delete("/dictionary-api/:term", function(req, res) {
