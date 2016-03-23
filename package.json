@@ -12,7 +12,8 @@
     "jsinspect": "echo '=> checking for copy/pasted code' && jsinspect *.js config/*.js public/js/*.js > pmd.xml",
     "copied": "echo '=> check for copy/pasted code' && gulp inspect > pmd.xml",
     "build": "echo '=> building' && npm test -s &&  npm run nsp -s && npm run complexity -s && npm run copied -s && npm run coverage -s && echo '=> building finished'",
-    "pretest": "npm run lint"
+    "pretest": "npm run eslint",
+    "eslint": "eslint *.js config/*.js public/js/*.js"
   },
   "repository": {
     "type": "git",
@@ -41,8 +42,12 @@
     "morgan": "^1.6.1"
   },
   "devDependencies": {
+    "babel-eslint": "^5.0.0",
     "chai": "^3.5.0",
     "cheerio": "^0.20.0",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3",
     "gulp": "^3.9.1",
     "gulp-complexity": "^0.3.2",
     "gulp-jshint": "^2.0.0",
