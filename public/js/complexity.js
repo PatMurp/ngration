@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 // unused function with a cyclomatic complexity of 4
 // jsHint fails due to .jshintrc maxcomplexity set to 3
 // (function(undefined) {
