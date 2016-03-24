@@ -8,5 +8,5 @@ before_script:
 script:
   - gulp ci-console
   - npm test
-  - npm run nsps
+  - npm run nsp
   - npm run coverage
