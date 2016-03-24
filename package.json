@@ -13,7 +13,7 @@
     "copied": "echo '=> check for copy/pasted code' && gulp inspect > pmd.xml",
     "build": "echo '=> building' && npm test -s &&  npm run nsp -s && npm run complexity -s && npm run copied -s && npm run coverage -s && echo '=> building finished'",
     "pretest": "npm run eslint",
-    "eslint": "eslint *.js config/*.js public/js/*.js",
+    "eslint": "eslint -f jslint-xml *.js config/*.js public/js/*.js > jshint.xml",
     "plato": "plato -r -d report -l .jshintrc -t 'Ngration Analysis' *.js config/*.js public/js/*.js"
   },
   "repository": {
@@ -63,7 +63,7 @@
     "mocha": "^2.4.5",
     "mocha-tap-reporter": "^0.1.3",
     "nsp": "^2.2.0",
-    "plato": "^1.5.0",
+    "plato": "git+https://github.com/deedubs/es6-plato.git",
     "rewire": "^2.5.1",
     "supertest": "^1.1.0"
   }
