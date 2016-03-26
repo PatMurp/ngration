@@ -11,10 +11,10 @@
     "complexity": "echo '=> checking code complexity' && gulp complex",
     "jsinspect": "echo '=> checking for copy/pasted code' && jsinspect *.js config/*.js public/js/*.js > pmd.xml",
     "copied": "echo '=> check for copy/pasted code' && gulp inspect > pmd.xml",
-    "build": "echo '=> building' && npm test -s &&  npm run nsp -s && npm run complexity -s && npm run copied -s && npm run coverage -s && echo '=> building finished'",
-    "pretest": "echo '=> eslint will go here'",
+    "build": "echo '=> building' && npm test -s &&  npm run nsp -s && npm run plato -s && npm run copied -s && npm run coverage -s && echo '=> building finished'",
+    "pretest": "npm run -s eslint",
     "eslint": "eslint -f jslint-xml *.js config/*.js public/js/*.js > jshint.xml",
-    "plato": "plato -r -d report -l .jshintrc -t 'Ngration Analysis' *.js config/*.js public/js/*.js"
+    "plato": "echo '=> generating complexity report' && plato -r -d report -l .jshintrc -t 'Ngration Analysis' *.js config/*.js public/js/*.js"
   },
   "repository": {
     "type": "git",
