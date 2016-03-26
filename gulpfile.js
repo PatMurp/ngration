@@ -3,7 +3,6 @@ const gulp = require('gulp');
 const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
 const mocha = require('gulp-mocha');
-const complexity = require('gulp-complexity');
 const jsinspect = require('gulp-jsinspect');
 const eslint = require('gulp-eslint');
 
@@ -38,11 +37,6 @@ gulp.task('eslint', () =>
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError()));
-
-// analyse code complexity
-gulp.task('complex', () =>
-    gulp.src(jsSources)
-  .pipe(complexity()));
 
 // detect copy/pasted & structurally similar code
 gulp.task('inspect', () =>
