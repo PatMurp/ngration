@@ -5,23 +5,28 @@
 Demo Node.js project that aims to expirement with implementing security from the beginning using Continuous Integration (CI)
 
 ###Implemented:  
-* run mocha tests
+* run mocha tests & generate test.tap report
 * use nsp tool to check for node module  security vulnerabilities
-* use istanbul to create code coverage reports
-* gulp ci task to analyze code complexity; outputs maintainibility index
-* gulp ci task to check for copy/pasted & structurally similar code
-* gulp ci task which run jshint on all JavaScript files. Configured to:
-	* enforce "use strict"; 
-	* Cyclomatic Complexity maximum value is 10 
+* use istanbul to create code coverage reports, HTML report generated in coverage folder
+* use es6-plato to generate complexity reports, HTML report generated in report folder
+* use jsinspect to check for copy/pasted & structurally similar code & generate pmd.xml report
+* eslint used to enforce airbnb es6 code standards & generate jshint.xml report
+* npm build script to run all CI tasks
 
-##### To run CI tasks locally:
+##### To run CI tasks individually:
 
 	$ npm install 
 	$ bower install 
-	$ gulp ci
-	$ npm test
-	$ npm run coverage
+	$ gulp ci-console
+	$ npm -s test
+	$ npm run -s nsp
+	$ npm run -s coverage
+	$ npm run -s plato
+	
+##### To run all CI tasks:
 
+	$ npm run build
+	
 ##### To run application:
 
 	$ node app.js

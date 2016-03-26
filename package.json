@@ -12,7 +12,7 @@
     "copied": "echo '=> check for copy/pasted code' && gulp inspect > pmd.xml",
     "build": "echo '=> building' && npm test -s &&  npm run nsp -s && npm run plato -s && npm run copied -s && npm run coverage -s && echo '=> building finished'",
     "pretest": "npm run -s eslint",
-    "eslint": "echo '=> applying code standards' && eslint -f jslint-xml *.js config/*.js public/js/*.js > jshint.xml",
+    "eslint": "echo '=> applying airbnb code standards' && eslint -f jslint-xml *.js config/*.js public/js/*.js > jshint.xml",
     "plato": "echo '=> generating complexity report' && plato -r -d report -l .jshintrc -t 'Ngration Analysis' *.js config/*.js public/js/*.js"
   },
   "repository": {
