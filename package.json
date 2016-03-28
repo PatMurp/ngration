@@ -8,7 +8,8 @@
     "nsp": "nsp check",
     "coverage": "istanbul cover _mocha",
     "lint": "jshint --reporter=checkstyle *.js config/*.js > checkstyle-result.xml",
-    "eslint": "echo '=> applying airbnb code standards' && eslint -f jslint-xml *.js config/*.js > jshint.xml"
+    "eslint": "echo '=> applying airbnb code standards' && eslint -f jslint-xml *.js config/*.js > jshint.xml",
+    "plato": "echo '=> generating complexity report' && plato -r -d report -l .jshintrc -t 'Ngration Analysis' *.js config/*.js"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "mocha": "^2.4.5",
     "mocha-tap-reporter": "^0.1.3",
     "nsp": "^2.2.0",
+    "plato": "git+https://github.com/deedubs/es6-plato.git",
     "rewire": "^2.5.1",
     "supertest": "^1.1.0"
   }
