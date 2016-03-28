@@ -10,7 +10,9 @@
     "lint": "jshint --reporter=checkstyle *.js config/*.js > checkstyle-result.xml",
     "eslint": "echo '=> applying airbnb code standards' && eslint -f jslint-xml *.js config/*.js > jshint.xml",
     "jsinspect": "echo '=> checking for copy/pasted code' && jsinspect *.js config/*.js > pmd.xml",
-    "plato": "echo '=> generating complexity report' && plato -r -d report -l .jshintrc -t 'Ngration Analysis' *.js config/*.js"
+    "plato": "echo '=> generating complexity report' && plato -r -d report -l .jshintrc -t 'Ngration Analysis' *.js config/*.js",
+    "pretest": "npm run -s eslint",
+    "build": "echo '=> building' && npm test -s &&  npm run nsp -s && npm run plato -s && npm run jsinspect -s && npm run coverage -s && echo '=> building finished'"
   },
   "repository": {
     "type": "git",
