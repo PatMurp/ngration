@@ -54,3 +54,4 @@ gulp.task('default', ['lint']);
 
 // continous integration tasks
 gulp.task('ci', ['inspect']);
+gulp.task('ci-console', ['eslint', 'inspect']);

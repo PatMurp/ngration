@@ -6,7 +6,7 @@ before_script:
   - npm install -g bower gulp istanbul
   - bower install
 script:
-  - gulp ci
+  - gulp ci-console
   - npm test
   - npm run nsp
   - npm run coverage
