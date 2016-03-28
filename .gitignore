@@ -6,3 +6,4 @@ report
 test.tap
 jshint.xml
 .sonar
+pmd.xml

@@ -4,11 +4,12 @@
   "description": "Starter node.js project which implements secruity using Continuous Integration",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --reporter mocha-tap-reporter > test.tap",
-    "nsp": "nsp check",
-    "coverage": "istanbul cover _mocha",
+    "test": " echo '=> testing' && mocha --reporter mocha-tap-reporter > test.tap",
+    "nsp": "echo '=> checking module security vulnerabilities' && nsp check",
+    "coverage": "echo '=> generating coverage report' && istanbul cover _mocha",
     "lint": "jshint --reporter=checkstyle *.js config/*.js > checkstyle-result.xml",
     "eslint": "echo '=> applying airbnb code standards' && eslint -f jslint-xml *.js config/*.js > jshint.xml",
+    "jsinspect": "echo '=> checking for copy/pasted code' && jsinspect *.js config/*.js > pmd.xml",
     "plato": "echo '=> generating complexity report' && plato -r -d report -l .jshintrc -t 'Ngration Analysis' *.js config/*.js"
   },
   "repository": {
@@ -41,7 +42,6 @@
     "eslint-config-airbnb": "^6.2.0",
     "eslint-plugin-react": "^4.2.3",
     "gulp": "^3.9.1",
-    "gulp-complexity": "^0.3.2",
     "gulp-eslint": "^2.0.0",
     "gulp-jshint": "^2.0.0",
     "gulp-jsinspect": "^2.0.0",
@@ -51,6 +51,7 @@
     "istanbul": "^0.4.2",
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.1.0",
+    "jsinspect": "^0.8.0",
     "mocha": "^2.4.5",
     "mocha-tap-reporter": "^0.1.3",
     "nsp": "^2.2.0",
