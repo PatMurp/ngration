@@ -4,6 +4,7 @@ const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
 const mocha = require('gulp-mocha');
 const jsinspect = require('gulp-jsinspect');
+const eslint = require('gulp-eslint');
 
 const jsSources = [
   'app.js',
@@ -29,6 +30,14 @@ gulp.task('lint', () =>
   .pipe(jshint())
   .pipe(jshint.reporter(stylish))
   .pipe(jshint.reporter('fail'))
+);
+
+// enforce airbnb code standards
+gulp.task('eslint', () =>
+  gulp.src(jsSources)
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
 );
 
 // detect copy/pasted & structrually similar code
