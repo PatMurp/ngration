@@ -33,8 +33,12 @@
     "morgan": "^1.6.1"
   },
   "devDependencies": {
+    "babel-eslint": "^6.0.0",
     "chai": "^3.5.0",
     "cheerio": "^0.20.0",
+    "eslint": "^2.5.1",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3",
     "gulp": "^3.9.1",
     "gulp-complexity": "^0.3.2",
     "gulp-eslint": "^2.0.0",
