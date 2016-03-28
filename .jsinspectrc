@@ -1,0 +1,7 @@
+{
+  "threshold":     10,
+  "identifiers":   true,
+  "ignore":        "test",
+  "reporter":      "pmd",
+  "suppress":      0
+}
