@@ -4,7 +4,10 @@
 
 Demo Node.js project that aims to expirement with implementing security from the beginning using Continuous Integration
 
-###Implemented:  
+##Implemented 
+* helmet module used to secure app using HTTP headers
+
+### npm script CI tasks:  
 * run mocha tests & generate test.tap report
 * use nsp tool to check for node module  security vulnerabilities
 * use istanbul to create code coverage reports, HTML report generated in coverage folder
@@ -13,15 +16,21 @@ Demo Node.js project that aims to expirement with implementing security from the
 * eslint used to enforce airbnb es6 code standards & generate jshint.xml report
 * npm build script to run all CI tasks
 
-##### To run CI tasks individually:
+##### Install modules and libaries:
 
 	$ npm install 
 	$ bower install 
-	$ gulp ci-console
+	
+##### To run CI tasks individually:
+
+	$ npm run -s eslint
 	$ npm -s test
 	$ npm run -s nsp
+	$ npm run -s jsinspect
 	$ npm run -s coverage
 	$ npm run -s plato
+	$ gulp ci-console
+
 	
 ##### To run all CI tasks:
 
