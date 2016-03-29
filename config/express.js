@@ -5,9 +5,10 @@ const errorHandler = require('errorhandler');
 const morgan = require('morgan');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const lusca = require('lusca');
+const helmet = require('helmet');
 
 exports.addMiddleware = function middleware(app) {
+  app.use(helmet());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json()); // get info from html froms
   app.use(morgan('dev')); // log requests to console
@@ -20,10 +21,5 @@ exports.addMiddleware = function middleware(app) {
     saveUninitialized: true,
   }));
 
-  app.use(lusca({
-    xframe: 'DENY',
-  }));
-
-  app.disable('x-powered-by'); // dont identify express framework
   app.use(errorHandler()); // Error handler must be last
 };
